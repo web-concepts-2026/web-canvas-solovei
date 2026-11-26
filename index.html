@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Canvas Solovei</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="site">
+            <div id="side-pannel">
+                <button class="tool-btn" data-tool="draw" title="draw"><img class="icon" src="imgs/draw.png"></button>
+                <button class="tool-btn" data-tool="erase" title="erase"><img class="icon" src="imgs/erase.png"></button>
+                <button class="tool-btn" data-tool="undo" title="undo"><img class="icon" src="imgs/undo.png"></button>
+                <button class="tool-btn" data-tool="clear" title="clear"><img class="icon" src="imgs/clear.png"></button>
+                <button class="tool-btn" data-tool="stamp" title="stamp"><img class="icon" src="imgs/stamp.png"></button>
+            </div>
+
+            <div id="main">
+                <div id="edit-brush">
+                    <div class="controls" id="slider-div">
+                        <input type="range" id="brush-size" min="1" max="50" value="5">
+                        <div id="min-max">
+                            <span>min 1</span>
+                            <span id="brush-size-value">5</span>
+                            <span>max 50</span>
+                        </div>
+                    </div>
+
+                    <div class="controls" id="color-div">
+                        <input type="color" id="brush-color" value="#000000">
+                    </div>
+                </div>
+
+                <canvas id="canvas"></canvas>
+            </div>
+        </div>
+        <script src="main.js" defer></script>
+    </body>
+</html>
